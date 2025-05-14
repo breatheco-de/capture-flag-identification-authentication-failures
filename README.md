@@ -12,7 +12,7 @@ In this lab, you will explore a Windows server hosting a personal WordPress site
 
 Follow these instructions to get started:
 
-1. **Download the virtual machine** from this [link](https://storage.googleapis.com/cybersecurity-machines/reverse-lab.ova).
+1. **Download the virtual machine** from this [link](https://storage.googleapis.com/cybersecurity-machines/blog-lab.ova).
 2. **Import the machine** into your preferred virtualization manager (VirtualBox, VMware, etc.).
 3. Once the machine is running, you can start the lab!
 
