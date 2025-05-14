@@ -1,51 +1,41 @@
-# MyBlog - Enumeración y acceso a credenciales expuestas
+# Enumeration and Access to Exposed Credentials
 
-En este laboratorio deberás explorar un servidor Windows que aloja un sitio WordPress personal y expone un servicio SMB vulnerable. Tu tarea será enumerar usuarios mediante herramientas específicas, analizar pistas dentro del blog, construir tu propio diccionario de contraseñas, acceder a recursos compartidos y obtener una flag secreta. En este laboratorio aprenderás:
+In this lab, you will explore a Windows server hosting a personal WordPress site and exposing a vulnerable SMB service. Your task is to enumerate users using specific tools, analyze clues within the blog, build your own password dictionary, access shared resources, and obtain a secret flag. In this lab you will learn:
 
-- Enumeración de servicios SMB
-- Análisis de pistas en contenido web
-- Creación de diccionarios personalizados
-- Acceso a recursos compartidos en Windows
-- Acceso remoto a WordPress con credenciales descubiertas
+- SMB service enumeration
+- Analyzing clues in web content
+- Creating custom dictionaries
+- Accessing shared resources on Windows
+- Remotely accessing WordPress with discovered credentials
 
+## 🌱 How to Start This Lab
 
-## 📄 Instrucciones
+Follow these instructions to get started:
 
-Estás frente al sitio personal de un fotógrafo llamado **John Wilson**. Además del blog, el servidor expone recursos compartidos por SMB en un entorno Windows. Deberás aplicar técnicas de enumeración y razonamiento para acceder a información sensible.
+1. **Download the virtual machine** from this [link](https://storage.googleapis.com/cybersecurity-machines/reverse-lab.ova).
+2. **Import the machine** into your preferred virtualization manager (VirtualBox, VMware, etc.).
+3. Once the machine is running, you can start the lab!
 
+## 📄 Instructions
 
-1. **Descubre la dirección IP de la máquina MyBlog.**
-   - La máquina está en tu misma red, pero su IP no ha sido indicada.
-   - Utiliza herramientas como `nmap`, `netdiscover` o `enum4linux` para descubrir la dirección IP y servicios activos.
+You are facing the personal site of a photographer named **John Wilson**. In addition to the blog, the server exposes SMB shared resources in a Windows environment. You must apply enumeration techniques and reasoning to access sensitive information.
 
-2. **Enumera los usuarios del sistema.**
-   - Usa `enum4linux` contra la IP para encontrar posibles usuarios de SMB.
-   - Identificarás al usuario `john`.
+1. **Discover the IP address of the MyBlog machine.** Use tools like `nmap`, `netdiscover`, or `enum4linux` to find the IP address and active services.
 
-3. **Explora el blog personal de John.**
-   - Accede a la dirección `http://<IP>/myblog` desde tu navegador.
-   - Busca un post donde John menciona su año de nacimiento según el horóscopo chino.
+2. **Enumerate system users.** Use `enum4linux` against the IP to find possible SMB users.
 
-4. **Deducción de la contraseña.**
-   - A partir del dato del “año del perro”, investiga posibles años: 1994, 1982, etc.
-   - Construye un archivo `possible_password.txt` con las opciones razonables.
+3. **Explore the personal blog.** Access `http://<IP>/myblog` from your browser.
 
-5. **Realiza un ataque de autenticación SMB.**
-   - Usa `hydra` o `smbclient` con tu diccionario para intentar autenticarte como `john`.
-   - La contraseña correcta es `1994`.
+4. **Deduce the password.**
 
-6. **Accede al recurso compartido.**
-   - Conéctate a `\\<IP>\john` y descarga el archivo `credentials_wp.txt`.
+5. **Perform an SMB authentication attack.** Use `hydra` or `smbclient` with your dictionary to try to authenticate.
 
-7. **Accede al WordPress con las credenciales.**
-   - Usuario: `john`
-   - Contraseña: `j0hn_1994`
-   - Ingresá en `http://<IP>/myblog/wp-login.php`
+6. **Access the shared resource.**
 
-8. **Captura la flag.**
-   - La flag se mostrará directamente en el panel de administración tras iniciar sesión como `john`.
+7. **Access WordPress with the credentials.**
 
-**Consejo:** no todo se resuelve con fuerza bruta. A veces, una pista bien colocada es la clave.
+8. **Capture the flag.** The flag will be displayed directly in the admin panel after logging in.
 
-¡Feliz hackeo!
+**Tip:** Not everything is solved by brute force. Sometimes, a well-placed clue is the key.
 
+Happy hacking!

@@ -1,0 +1,30 @@
+{
+  "slug": "enumeration-and-access-to-exposed-credentials-lab",
+  "title": {
+    "es": "MyBlog - Enumeración y acceso a credenciales expuestas",
+    "en": "MyBlog - Enumeration and Access to Exposed Credentials"
+  },
+  "preview": "https://github.com/breatheco-de/capture-flag-web-shell-upload/blob/main/assets/preview.png?raw=true",
+  "solution": {
+    "us":"https://github.com/breatheco-de/capture-flag-identification-authentication-failures/blob/solution/SOLUTION.md",
+    "es": "https://github.com/breatheco-de/capture-flag-identification-authentication-failures/blob/solution/SOLUTION.es.md"
+    },
+  "technologies": [
+    "cybersecurity",
+    "windows",
+    "wordpress",
+    "smb",
+    "enum4linux",
+    "hydra",
+    "red-team",
+    "owasp-a05-security-misconfiguration",
+    "owasp-a07-identification-authentication-failures"
+  ],
+  "difficulty": "intermediate",
+  "duration": 2,
+  "projectType": "capture-the-flag",
+  "description": {
+    "es": "Explora un servidor Windows con un sitio WordPress y recursos SMB vulnerables. Enumera usuarios, construye diccionarios personalizados y accede con credenciales descubiertas para capturar una flag.",
+    "en": "Explore a Windows server hosting a WordPress site and vulnerable SMB shares. Enumerate users, build custom dictionaries, and use discovered credentials to capture a flag."
+  }
+}
