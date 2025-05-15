@@ -8,6 +8,8 @@ In this lab, you will explore a Windows server hosting a personal WordPress site
 - Accessing shared resources on Windows
 - Remotely accessing WordPress with discovered credentials
 
+<how-to-start>
+  
 ## 🌱 How to Start This Lab
 
 Follow these instructions to get started:
@@ -15,6 +17,7 @@ Follow these instructions to get started:
 1. **Download the virtual machine** from this [link](https://storage.googleapis.com/cybersecurity-machines/blog-lab.ova).
 2. **Import the machine** into your preferred virtualization manager (VirtualBox, VMware, etc.).
 3. Once the machine is running, you can start the lab!
+</how-to-start>
 
 ## 📄 Instructions
 
